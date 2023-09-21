@@ -1,5 +1,5 @@
 :root {
-  --fullWidth: 300px;
+  --fullWidth: 280px;
   --fullHeight: 450px;
   --screenSize: 60px;
   --mobileScreenSize: 40px;
@@ -9,9 +9,13 @@
   --functions_Color: #FEFFFD;
   --numbers_backgroundColor: #333333;
   --numbers_Color: white;
+  --bodyBackground: black;
 }
 *{
   box-sizing:border-box;
+}
+::selection {
+  background: transparent;
 }
 .calcBody {
   width:var(--fullWidth);
@@ -23,19 +27,18 @@
   border-radius: 20px;
   box-shadow: 2px 2px 10px black;
   overflow: hidden;
+  background-color: var(--bodyBackground);
 }
 .topPart {
   height:calc(var(--fullHeight)/3);
   width: 100%;
-  background-color: black;
   text-align: center;
   position: relative;
-  color: white;
+  color: var(--numbers_Color);
 }
 .bottomPart {
   height:calc(66.6% - 1px);
   width: 100%;
-  background-color: black;
 }
 .screen {
   width: calc(100% - 20px);
@@ -45,10 +48,11 @@
   position: absolute;
   left: 10px;
   bottom: 0px;
-  color: white;
+  color: var(--numbers_Color);
   text-align: end;
-  border-bottom: 2px solid lightslategray;
+  border-bottom: 2px solid var(--numbers_backgroundColor);
   font-family: Helvetica, sans-serif;
+  transition: all 0.4s ease-out;
 }
 .row  {
   width:100%;
@@ -73,6 +77,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
+  padding-right: 12px;
 }
 #clearAll, #invertPositiveNegative, #percent {
   background-color: var(--row1_backgroundColor );
@@ -89,4 +94,29 @@
 }
 #zero {
   width: 50%;
+}
+.messages {
+  width:var(--fullWidth);
+  height: 6%;
+  line-height: 20px;
+  font-size: 2px;
+  position: absolute;
+  left:calc((100% - var(--fullWidth))* 0.5);
+  top: calc(var(--fullHeight) + 50px);
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+@keyframes buttonAnimation {
+  0%{
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animationReset {
+  0%{
+  }
 }

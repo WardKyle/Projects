@@ -13,36 +13,37 @@
   </div>
   <div class="bottomPart">
     <div class="row">
-      <div class="calcButton" id="clearAll">AC</div>
-      <div class="calcButton" id="invertPositiveNegative">+/-</div>
+      <div class="calcButton" id="clearAll" onclick="clearIt()">AC</div>
+      <div class="calcButton" id="invertPositiveNegative" onclick="invert()">+/-</div>
       <div class="calcButton" id="percent">%</div>
       <div class="calcButton calculations" id="divide">÷</div>
     </div>
     <div class="row">
-      <div class="calcButton buttonNumbers" id="seven">7</div>
-      <div class="calcButton buttonNumbers" id="eight">8</div>
-      <div class="calcButton buttonNumbers" id="nine">9</div>
+      <div class="calcButton buttonNumbers" id="seven" onclick="keypad(7)">7</div>
+      <div class="calcButton buttonNumbers" id="eight" onclick="keypad(8)">8</div>
+      <div class="calcButton buttonNumbers" id="nine" onclick="keypad(9)">9</div>
       <div class="calcButton calculations" id="mutiply">×</div>
     </div>
     <div class="row">
-      <div class="calcButton buttonNumbers" id="four">4</div>
-      <div class="calcButton buttonNumbers" id="five">5</div>
-      <div class="calcButton buttonNumbers" id="six">6</div>
+      <div class="calcButton buttonNumbers" id="four" onclick="keypad(4)">4</div>
+      <div class="calcButton buttonNumbers" id="five" onclick="keypad(5)">5</div>
+      <div class="calcButton buttonNumbers" id="six" onclick="keypad(6)">6</div>
       <div class="calcButton calculations" id="subtract">−</div>
     </div>
     <div class="row">
-      <div class="calcButton buttonNumbers" id="one">1</div>
-      <div class="calcButton buttonNumbers" id="two">2</div>
-      <div class="calcButton buttonNumbers" id="three">3</div>
+      <div class="calcButton buttonNumbers" id="one" onclick="keypad(1)">1</div>
+      <div class="calcButton buttonNumbers" id="two" onclick="keypad(2)">2</div>
+      <div class="calcButton buttonNumbers" id="three" onclick="keypad(3)">3</div>
       <div class="calcButton calculations" id="addition">+</div>
     </div>
     <div class="row">
-      <div class="calcButton_double buttonNumbers"><div id="zero">0</div></div>
-      <div class="calcButton buttonNumbers" id="deciman">.</div>
+      <div class="calcButton_double buttonNumbers" onclick="keypad(0)"><div id="zero">0</div></div>
+      <div class="calcButton buttonNumbers" id="decimal" onclick="keypad('.')">.</div>
       <div class="calcButton calculations" id="equals">=</div>
     </div>
   </div>
 </div>
+<div class="messages"></div>
 <script src="index.js"></script>
 </body>
 </html>
