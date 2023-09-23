@@ -1,15 +1,21 @@
 /*
 To DO
 -----
-1. Percentages - trying to add comma when percent 1,000.23 ex/
-2. keypad() adding a number to inverted/negative number removes negative
-*/
 
+
+*/
+let storedValue, storedOperation = "", storedTotal = 0;
 let message = document.querySelector(".messages");
+let storedTotal_ID = document.querySelector("#storedTotal_ID");
 
 const finalRun = (afterDecimal = "") => {
   let entered = document.querySelector(".screen");
+  let hasNegativeNumber = entered.innerHTML.includes("-");
   let newStr = entered.innerHTML.replace(/[,-.]/g,"");
+  if (afterDecimal != "" && !afterDecimal.includes(".")) {
+    newStr = newStr.slice(0,(newStr.length - afterDecimal.length));
+    afterDecimal = "."+afterDecimal;
+  }
   if (newStr.length < 4){
     entered.innerHTML = newStr+afterDecimal;
   } else if (newStr.length === 4){
@@ -31,7 +37,6 @@ const finalRun = (afterDecimal = "") => {
 }
 const addCommas = () => {
   let entered = document.querySelector(".screen");
-  let hasNegativeNumber = entered.innerHTML.includes("-");
   let hasDecimal = entered.innerHTML.includes(".");
   let hasComma = entered.innerHTML.includes(",");
   if(hasDecimal && hasComma){
@@ -77,10 +82,16 @@ const screenLength = (currScreen, converted = "") => {
   } 
   return true;
 }
-const clearIt = () => {
+const clearIt = (fullClear = false) => {
   let clearIt = document.querySelector(".screen");
   clearIt.innerHTML = 0;
   clearIt.style.fontSize = "60px";
+  if (fullClear){
+    storedOperation = "";
+    storedValue = "";
+    storedTotal = 0;
+    storedTotal_ID.innerHTML = "";
+  }
   clearMessage();
 };
 const clearMessage = () => {
@@ -122,11 +133,91 @@ const percentage = () => {
   let converted = percent.toFixed(decimals);
   if(screenLength(entered,converted.toString())){
     entered.innerHTML = converted;
-
-
-
-    // let foundAt = converted.indexOf('.');
-    // let includesDecimal = converted.slice(foundAt)
-    // finalRun(includesDecimal)
+    let foundAt = converted.indexOf('.');
+    let includesDecimal = converted.slice(foundAt+1);
+    finalRun(includesDecimal)
   }
 };
+let addition = () => {
+  if(storedOperation != "" && storedOperation != addition){
+    storedOperation();
+    storedOperation = addition;
+    return;
+  }
+  storedOperation = addition;
+  let entered = document.querySelector(".screen");
+  storedValue = Number(entered.innerHTML.replace(/,/g,""));
+  if(storedTotal_ID.innerHTML == ""){
+    storedTotal_ID.innerHTML = storedValue;
+    storedTotal = storedValue;
+    entered.innerHTML = "0";
+    return;
+  }
+  clearIt();
+  storedTotal += storedValue;
+  storedTotal_ID.innerHTML = storedTotal;
+}
+let subtraction = () => {
+  if(storedOperation != "" && storedOperation != subtraction){
+    storedOperation();
+    storedOperation = subtraction;
+    return;
+  }
+  storedOperation = subtraction;
+  let entered = document.querySelector(".screen");
+  storedValue = Number(entered.innerHTML.replace(/,/g,""));
+  if(storedTotal_ID.innerHTML == ""){
+    storedTotal_ID.innerHTML = storedValue;
+    storedTotal = storedValue;
+    entered.innerHTML = "0";
+    return;
+  }
+  clearIt();
+  storedTotal -= storedValue;
+  storedTotal_ID.innerHTML = storedTotal;
+}
+let multiplication = () => {
+  if(storedOperation != "" && storedOperation != multiplication){
+    storedOperation();
+    storedOperation = multiplication;
+    return;
+  }
+  storedOperation = multiplication;
+  let entered = document.querySelector(".screen");
+  storedValue = Number(entered.innerHTML.replace(/,/g,""));
+  if(storedTotal_ID.innerHTML == ""){
+    storedTotal_ID.innerHTML = storedValue;
+    storedTotal = storedValue;
+    entered.innerHTML = "0";
+    return;
+  }
+  clearIt();
+  storedTotal *= storedValue;
+  storedTotal_ID.innerHTML = storedTotal;
+}
+let division = () => {
+  if(storedOperation != "" && storedOperation != division){
+    storedOperation();
+    storedOperation = division;
+    return;
+  }
+  storedOperation = division;
+  let entered = document.querySelector(".screen");
+  storedValue = Number(entered.innerHTML.replace(/,/g,""));
+  if(storedTotal_ID.innerHTML == ""){
+    storedTotal_ID.innerHTML = storedValue;
+    storedTotal = storedValue;
+    entered.innerHTML = "0";
+    return;
+  }
+  clearIt();
+  storedTotal /= storedValue;
+  storedTotal_ID.innerHTML = storedTotal;
+}
+let enterEquals = () => {
+  let entered = document.querySelector(".screen");
+  storedOperation();
+  entered.innerHTML = storedTotal;
+  storedTotal_ID.innerHTML = "";
+  storedTotal = 0;
+}

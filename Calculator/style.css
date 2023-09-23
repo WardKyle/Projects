@@ -109,3 +109,11 @@
   color: white;
   transition: all 0.2s ease-out;
 }
+#storedTotal_ID {
+  height: 30px;
+  width: calc(100% - 20px);
+  font-size: 30px;
+  color: var(--numbers_backgroundColor);
+  text-align: right;
+  font-weight: bold;
+}
