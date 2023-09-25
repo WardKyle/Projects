@@ -112,13 +112,7 @@ const invert = () => {
     entered.innerHTML = "-" + entered.innerHTML;
   }
 }
-const clicked = (clickedId) => {
-  let clicked = document.querySelector(clickedId);
-  clicked.style.opacity = "0.4";
-  setTimeout(() => {
-    clicked.style.opacity = "1";
-  }, 100);
-};
+
 const percentage = () => { 
   const findDecimal = (num) => {
     if(Number.isInteger(num)){
