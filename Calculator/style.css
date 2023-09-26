@@ -128,3 +128,19 @@
   text-align: right;
   font-weight: bold;
 }
+.calcButton:active {
+  animation-name: btnClick;
+  animation-duration: 400ms;
+}
+@keyframes btnClick {
+  
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

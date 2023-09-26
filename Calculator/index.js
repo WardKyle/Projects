@@ -112,7 +112,6 @@ const invert = () => {
     entered.innerHTML = "-" + entered.innerHTML;
   }
 }
-
 const percentage = () => { 
   const findDecimal = (num) => {
     if(Number.isInteger(num)){
@@ -212,6 +211,8 @@ let enterEquals = () => {
   let entered = document.querySelector(".screen");
   storedOperation();
   entered.innerHTML = storedTotal;
+  entered.innerHTML.includes('.')?finalRun(entered.innerHTML.slice(entered.innerHTML.indexOf('.')+1)):""; 
+  if(!screenLength(entered)){entered.innerHTML = "0"};
   storedTotal_ID.innerHTML = "";
   storedTotal = 0;
 }
