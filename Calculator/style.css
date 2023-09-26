@@ -72,6 +72,18 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.calcButton:active {
+  animation-name: btnClick;
+  animation-duration: 100ms;
+}
+
+@keyframes btnClick {
+  0% { opacity: 1;}
+  50% { opacity: .4;}
+  100% { opacity: 1;}
+}
+
 .calcButton_double {
   flex:2;
   border-radius: 30px;
