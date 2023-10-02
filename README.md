@@ -15,11 +15,11 @@ ________________________________________________
 
 # Digital Business Card - Built with React
 
-**Began: 9/19/2023**
+**Began: 10/2/2023**
 
 **Completed: 10/2/2023**
 
-**Code base: HTML, CSS, JS, React.js**
+**Code base: HTML, CSS, JS, React**
 
 **Text editor: VS Code**
 
