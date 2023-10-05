@@ -26,3 +26,16 @@ ________________________________________________
 **Contributors: None**
 
 While going through Scrimba's self-guided React module, building a digital business card was recommended as the first solo project. 
+________________________________________________
+
+# Airbnb Clone
+
+**Began: 10/5/2023**
+
+**Completed: 10/5/2023**
+
+**Code base: HTML, CSS, JS, JSX, React**
+
+**Text editor: VS Code**
+
+**Contributors: None**
