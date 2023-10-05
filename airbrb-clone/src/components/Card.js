@@ -10,7 +10,7 @@ export default function Card({openSpots,location,stats,coverImg,price,title}) {
     return (
         <div className="card">
             {badgeText && <div className="card--badge">{badgeText}</div>}
-            <img src={`../images/${coverImg}`} className="card--image" />
+            <img src={`../images/${coverImg}`} className="card--image" alt={coverImg}/>
             <div className="card--stats">
                 <img src="../images/star.png" className="card--star" />
                 <span>{stats.rating}</span>
