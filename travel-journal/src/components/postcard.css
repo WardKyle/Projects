@@ -1,0 +1,50 @@
+.postcard {
+  display: flex;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 10px 0px;
+  color: #2b283a;
+  border-bottom: 1px solid #d1d0d7;
+}
+.postcard--img {
+  width: 130px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.info--section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.postcard p {
+  font-weight: 500;
+  font-size: 12px;
+}
+.p--country {
+  text-transform: uppercase;
+}
+.p--country a{
+  color: #918e9b;
+  font-size: 10px;
+  text-transform:capitalize;
+  padding-left: 8px;
+  transition: all 0.5s ease-out;
+}
+.p--country a:hover{
+  color: #f55a5a;
+}
+.fa-location-dot {
+  color: #f55a5a;
+  font-size: 10px;
+  vertical-align: top;
+  padding-right: 8px;
+}
+.postcard h3 {
+  padding: 10px 0px;
+}
+.postcard .dates {
+  font-weight: bold;
+  padding: 8px 0;
+}

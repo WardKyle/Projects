@@ -13,7 +13,7 @@
 I wanted to develop a calculator through HTML, CSS, and JavaScript that mimics an iPhone calculator both visually and functionally. This is my first project added and pushed to GitHub. 
 ________________________________________________
 
-# Digital Business Card - Built with React
+# Digital Business Card - Scrimba React.js Project
 
 **Began: 10/2/2023**
 
@@ -30,7 +30,7 @@ ________________________________________________
 
 # Airbnb Clone
 
-**Began: 10/5/2023**
+**Began: 10/4/2023**
 
 **Completed: 10/5/2023**
 
@@ -39,3 +39,20 @@ ________________________________________________
 **Text editor: VS Code**
 
 **Contributors: None**
+
+Built while going through the Scrimba lessons. 
+________________________________________________
+
+# Travel Journal - Scrimba React.js Project
+
+**Began: 10/9/2023**
+
+**Completed: 10/10/2023**
+
+**Code base: HTML, CSS, JS, React**
+
+**Text editor: VS Code**
+
+**Contributors: None**
+
+This is my solution to Scrimba's second solo project, a Travel Journal. Scrimba helps you improve your coding skills by building realistic projects.
