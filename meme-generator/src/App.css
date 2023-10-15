@@ -72,6 +72,7 @@ h1#bottom {
   bottom:0px;
 }
 
+/* Media calls below */
 @media (min-width:800px){
   header > h1 {
     font-size: 2rem;
