@@ -30,6 +30,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 input[type="text"], #form--button, #text--toggle { 
   max-width: 400px;
