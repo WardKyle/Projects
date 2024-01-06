@@ -1,0 +1,268 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: white;
+  font-family: MazdaFont;
+}
+p {
+  margin: 0px;
+}
+:root {
+  --main-font-color: #111111;
+}
+@font-face {
+  font-family: MazdaFont;
+  src: url(fonts/MazdaType-Regular.otf);
+}
+.top-banner {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 180%;
+  line-height: 24px;
+  letter-spacing: 5px;
+  width: 352px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  color: var(--main-font-color);
+}
+.car--container {
+  position: absolute;
+  width: 100%;
+  height: 890px;
+  background: linear-gradient(180deg, rgba(0,0,0) calc(400px - (100vw * .294)), rgba(255,255,255,0) 50%, rgba(0,0,0,1) calc(490px + (100vw * .294)));
+  z-index: 2;
+  .top--box {
+    position: absolute;
+    width: 100%;
+    height: 203px;
+    .first-row {
+      font-size: 170%;
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+      margin-top: 48px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .second-row {
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      font-size: 320%;
+      letter-spacing: 3.75px;
+      line-height: 40px;
+      padding-top: 11.8px;
+    }
+    .third-row {
+      font-size: 180%;
+      width: 100%;
+      text-align: center;
+      line-height: 27px;
+      font-weight: 400;
+      padding-top: 7.2px;
+      .bold {
+        font-weight: 700;
+      }
+    }
+  }
+  .offer-details--container {
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 197px;
+    height: 70px;
+    display: flex;
+  }
+  .offer-details {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 41px 58px 51px;
+    justify-items: center;
+    font-size: 120%;
+    font-weight: 400;
+    gap: 16px;
+    .bold {
+      font-weight: 700;
+      font-size: 240%;
+    }
+    .bottom {
+      display: grid;
+      align-items: center;
+      height: 30px;
+    }
+  }
+  .buttons {
+    width: 100%;
+    height: 108px;
+    position: absolute;
+    top: 678px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #inventory--button, #contact--button  {
+      width: 320px;
+      height: 48px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .button-text {
+        font-size: 130%;
+        font-weight: 700;
+        letter-spacing: 2.6px;
+        line-height: 15.63px;
+        position: relative;
+      }
+    }
+    #inventory--button {
+      background-color: white;
+      color: black;
+    }
+    #contact--button {
+      margin-top: 12px;
+      background-color: black;
+
+    }
+  }
+  .fa-circle-info {
+    font-size: 24px;
+    position: absolute;
+    top: 818px;
+    left: 22px;
+  }
+  .disclaimer {
+    font-weight: 400;
+    font-size: 102%;
+    line-height: 21px;
+    position: absolute;
+    top: 819px;
+    left: 54px;
+  }
+  .expiration {
+    font-weight: 400px;
+    font-size: 102%;
+    line-height: 21px;
+    position: absolute;
+    top: 819px;
+    left: 218px;
+    .bold {
+      font-weight: 700;
+    }
+  }
+}
+.content--section {
+  width: 330px;
+  height: 2260.83px;
+  top: 1292.5px;
+  position: absolute;
+  left: 40px;
+  color: #111111;
+  h2 {
+    font-weight: 400;
+    font-size: 130.5%;
+    line-height: 14.85px;
+    letter-spacing: 2.25px;
+    width: 258px;
+  }
+  .paragraph2, .paragraph3, .paragraph4, .paragraph5, .paragraph6, .paragraph7, .paragraph8, .paragraph9, .paragraph10, .paragraph11 {
+    font-weight: 400;
+    font-size: 140%;
+    line-height: 18px;
+    position: absolute;
+  }
+  .paragraph2 {
+    width: 322px;
+    height: 144px;
+    top: 44.19px;
+  }
+  .paragraph3 {
+    top: 198.69px;
+    height: 90px;
+    width: 330px;
+  }
+  .paragraph4 {
+    top: 298.69px;
+    width: 330px;
+    height: 54px;
+  }
+  .paragraph5 {
+    top: 362.19px;
+    width: 289px;
+    height: 90px;
+  }
+  .paragraph6 {
+    top: 462.19px;
+    width: 317px;
+    height: 90px;
+  }
+  .heading2, .heading3 {
+    position: absolute;
+    font-size: 13.5px;
+    line-height: 14.85px;
+    letter-spacing: 2.25px;
+    font-weight: 400;
+    top: 572.69px;
+  }
+  .paragraph7 {
+    top: 602.03px;
+    width: 326px;
+    height: 90px;
+    padding: 0px 4px 0px 0px;
+  }
+  .paragraph8 {
+    top: 702.03px;
+    width: 326px;
+    height: 72px;
+    padding: 0px 4px 0px 0px;
+  }  
+  .heading3 {
+    top: 794.53px;
+  }
+  .paragraph9 {
+    top: 823.88px;
+    width: 321px;
+    height: 90px;
+    padding: 0px 9px 0px 0px;
+  }  
+  .paragraph10 {
+    top: -253.5px;
+    width: 302px;
+    height: 72px;
+    padding: 0px 28px 0px 0px;
+  }  
+  .paragraph11 {
+    top: -171.5px;
+    width: 305px;
+    height: 126px;
+    padding: 0px 25px 0px 0px;
+  }  
+}
+.car--image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 145%;
+  background-image: url(images/mazda_header.png);
+  background-position: 87% 50%;
+  width: 100%;
+  height:890px;
+  z-index: -1;
+}
+@media (min-width:900px){
+  h1 {
+    font-size: 240%;
+    width: 698px;
+    line-height: 22px;
+  }
+}
